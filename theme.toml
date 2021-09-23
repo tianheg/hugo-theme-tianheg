@@ -4,16 +4,17 @@
 name = "Tianheg"
 license = "MIT"
 licenselink = "https://github.com/tianheg/hugo-theme-tianheg/blob/main/LICENSE"
-description = "A hugo theme by tianheg"
-homepage = "https://blog.yidajiabei.xyz/"
-tags = [
-  "tianheg"
-]
-features = [
-  "fast"
-]
-min_version = "0.41.0"
+description = "A hugo theme, modified by tianheg, authored by reuixiy"
+homepage = "https://github.com/tianheg/hugo-theme-tianheg/"
+tags = ["Blog", "Minimal", "Clean", "Typography", "Multilingual"]
+features = ["Dark Mode", "MathJax", "KaTeX", "JSON-LD", "Drop Cap", "PWA", "TOC"]
+min_version = "0.73.0"
 
 [author]
   name = "Jim Gao"
   homepage = "https://blog.yidajiabei.xyz/"
+
+[original]
+  author =  "reuixiy"
+  homepage = "https://io-oi.me/"
+  repo = "https://github.com/reuixiy/hugo-theme-meme/"
