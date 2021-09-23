@@ -1,7 +1,3 @@
-## Description
+# hugo-theme-tianheg
 
-A hugo theme by @tianheg
-
-## ATTENTION
-
-This theme is still under development, you can *watch* me if you are interested.
+Tianheg is a hugo theme based on [hugo-theme-meme](https://github.com/reuixiy/hugo-theme-meme).
