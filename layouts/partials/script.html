@@ -28,18 +28,6 @@
     {{- $scripts = union $scripts (slice "js/copy.js") -}}
 {{- end -}}
 
-{{- if and .Site.Params.enableComments (eq hugo.Environment "production") -}}
-    {{- $scripts = union $scripts (slice "js/comments.js") -}}
-{{- end -}}
-
-{{- if .Site.Params.enableLunrSearch -}}
-    {{- $scripts = union $scripts (partial "third-party/lunr-search.html" .) -}}
-{{- end -}}
-
-{{- if .Site.Params.enableAlgoliaSearch -}}
-    {{- $scripts = union $scripts (partial "third-party/algolia-search.html" .) -}}
-{{- end -}}
-
 {{- $scripts = union $scripts (slice "js/custom.js") -}}
 
 {{- $processedScripts := slice ("" | resources.FromString "dummy.js") -}}
@@ -52,7 +40,7 @@
     {{- end -}}
 {{- end -}}
 
-{{- $path := (strings.TrimPrefix "/" (printf `%s/js/meme.js` .Site.LanguagePrefix)) -}}
+{{- $path := (strings.TrimPrefix "/" (printf `%s/js/tianheg.js` .Site.LanguagePrefix)) -}}
 
 {{- $script := $processedScripts | resources.Concat $path | resources.Minify -}}
 {{- if .Site.Params.enableFingerprint -}}

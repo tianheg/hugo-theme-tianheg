@@ -327,7 +327,6 @@ $baseRelURL: "{{ strings.TrimSuffix (.Site.BaseURL | relURL) "/" }}";
         $shareViaQRCode: false;
     {{ end }}
 
-    @import "components/post-share";
 {{ end }}
 
 {{ if .Site.Params.enableRelatedPosts }}
@@ -350,10 +349,6 @@ $baseRelURL: "{{ strings.TrimSuffix (.Site.BaseURL | relURL) "/" }}";
     @import "components/post-nav";
 {{ end }}
 
-{{ if .Site.Params.enableComments }}
-    @import "components/comments";
-{{ end }}
-
 {{ if .Site.Params.enableBackToTop }}
     {{ if .Site.Params.enableBackToTopAutoHide }}
         $enableBackToTopAutoHide: true;
@@ -368,10 +363,6 @@ $baseRelURL: "{{ strings.TrimSuffix (.Site.BaseURL | relURL) "/" }}";
     @import "components/highlight";
 {{ end }}
 
-{{ if .Site.Params.enableSocials }}
-    @import "components/socials";
-{{ end }}
-
 
 // Homepage Layout
 
@@ -380,33 +371,6 @@ $baseRelURL: "{{ strings.TrimSuffix (.Site.BaseURL | relURL) "/" }}";
 
     @import "pages/home-poetry";
 {{ end }}
-
-{{ if eq .Site.Params.homeLayout "footage" }}
-    // https://github.com/reuixiy/hugo-theme-meme/issues/51
-    {{ if strings.HasPrefix .Site.Params.homePoster "." }}
-        {{ $homePoster := printf `.%s` .Site.Params.homePoster }}
-        {{ .Scratch.Set "homePoster" $homePoster }}
-    {{ else }}
-        {{ .Scratch.Set "homePoster" .Site.Params.homePoster }}
-    {{ end }}
-    {{ $homePoster := .Scratch.Get "homePoster" }}
-
-    $homePoster: url({{ $homePoster }});
-
-    @import "pages/home-footage";
-{{ end }}
-
-{{ if eq .Site.Params.homeLayout "posts" }}
-    @import "pages/home-posts";
-{{ end }}
-
-
-// Categories Page
-
-{{ if .Site.Params.enableTree }}
-    @import "pages/tree-categories";
-{{ end }}
-
 
 // Tags Page
 
@@ -438,24 +402,6 @@ $fofPoster: url({{ $fofPoster }});
 {{ if .Site.Params.enableMediumZoom }}
     @import "third-party/medium-zoom";
 {{ end }}
-
-// Busuanzi Site UV And PV
-
-{{ if .Site.Params.enableFooter }}
-    {{ if and .Site.Params.displayBusuanziSiteUVAndPV (eq hugo.Environment "production") }}
-        @import "third-party/busuanzi";
-    {{ end }}
-{{ end }}
-
-// Lunr search
-
-{{ if and (eq .Site.Params.headerLayout "flex") (or .Site.Params.enableLunrSearch .Site.Params.enableAlgoliaSearch) }}
-    $enableSearch: true;
-    @import "components/search";
-{{ else }}
-    $enableSearch: false;
-{{ end }}
-
 
 // Responsive
 
