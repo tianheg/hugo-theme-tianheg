@@ -42,15 +42,9 @@
 
         </article>
 
-        {{ if and .Site.Params.enableGoogleAdUnits (eq hugo.Environment "production") -}}
-            {{ partial "third-party/google-adsense-unit.html" . }}
-        {{- end }}
-
         {{ partial "components/post-updated-badge.html" . }}
 
         {{ partial "components/post-gitinfo.html" . }}
-
-        {{ partial "components/post-share.html" . }}
 
         {{ partial "components/related-posts.html" . }}
 
@@ -61,8 +55,5 @@
         {{ partial "components/minimal-footer-about.html" . }}
 
         {{ partial "components/post-nav.html" . }}
-
-        {{ partial "components/comments.html" . }}
-
     </div>
 </main>
