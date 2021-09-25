@@ -9,7 +9,7 @@ if (userPrefers === 'dark') {
     changeModeMeta('light');
 }
 
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener((e) => {
+window.matchMedia('(prefers-color-scheme: dark)').addListener((e) => {
     changeMode();
 });
 
