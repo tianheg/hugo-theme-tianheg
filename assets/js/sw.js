@@ -9,11 +9,11 @@
   6. https://www.youtube.com/watch?v=baSiSIyTGSk
 */
 
-const RUNTIME = 'runtime';
+const RUNTIME = "runtime";
 
 self.skipWaiting();
 
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   // Do nothing if not the same origin
   if (!event.request.url.startsWith(self.location.origin)) {
     return;
