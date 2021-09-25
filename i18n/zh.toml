@@ -113,13 +113,13 @@ other = "九"
 
 
 [notice-warning]
-other = "Warning"
+other = "警告"
 
 [notice-note]
-other = "Note"
+other = "笔记"
 
 [notice-info]
-other = "Info"
+other = "信息"
 
 [notice-tip]
-other = "Tip"
+other = "提示"
