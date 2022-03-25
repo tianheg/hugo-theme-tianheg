@@ -1,7 +1,8 @@
 # hugo-theme-tianheg
 
 Tianheg is a hugo theme based on [hugo-theme-meme](https://github.com/reuixiy/hugo-theme-meme).
-
+## TODO
+- [ ] Use md syntax display mermaid, not `<div class="mermaid"></div>`
 ## References
 
 1. <https://github.com/reuixiy/hugo-theme-meme/tree/fdf98dfa6ed37d0e954bb50e076a2790c73fdb0c>
