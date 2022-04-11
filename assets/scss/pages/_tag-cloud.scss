@@ -7,7 +7,12 @@
   display: inline-block;
 }
 
-.tag-cloud-item-count {
+.tag-cloud-item > .tag-cloud-item-count {
+  display: none;
+}
+
+.tag-cloud-item:hover > .tag-cloud-item-count {
+  display: inline-block;
   position: relative;
   top: -15px;
 }
